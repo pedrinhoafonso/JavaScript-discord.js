@@ -1,0 +1,9 @@
+// Essa vai ser a Base Para Deixar online o seu bot, cole isso no index.js
+
+
+const Discord = require("discord.js"); // Importando o Discord.js
+const client = new Discord.Client(); // Criando Um Novo Client
+
+client.login("Token"); // Ligando o Bot com o Token, no lugar de "token" bote o Token do seu bot
+
+// só isso irá deixar seu bot online! 

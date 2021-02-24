@@ -1,0 +1,63 @@
+```
+const Discord = require(`discord.js`);
+
+
+
+    exports.run = async (bot,message,args) => {
+
+        let embed = new Discord.MessageEmbed()
+        .setColor(`ff0a7e`)
+        .setTitle(`Help - `)
+        .setDescription(`***Olá***`)
+
+        message.channel.send(message.author, embed).then(msg => { //quando enviar a mensagem...
+            msg.react(`marcação do emoji`).then(() => { //quando reagir o primeiro emoji...
+            msg.react(`marcação do emoji`);
+            msg.react(`marcação do emoji`);
+})
+
+
+            const pagina = msg.createReactionCollector((reaction, user) => reaction.emoji.id == `id` && user.id == message.author.id, {time: 60000}) //time: tempo, 1000 = 1sec, 10000 = 10sec
+            const voltar = msg.createReactionCollector((reaction, user) => reaction.emoji.id == `id` && user.id == message.author.id, {time: 60000})
+
+const três = msg.createReactionCollector((reaction, user) => reaction.emoji.id == `id` && user.id == message.author.id, {time: 60000})
+  
+const quatro = msg.createReactionCollector((reaction, user) => reaction.emoji.id == `id` && user.id == message.author.id, {time: 60000})
+  
+            pagina.on(`collect`, r =>{  //quando coletar
+
+                let embed_two = new Discord.MessageEmbed()
+.setColor(`BLACK`)
+.setTitle(`***Meus Comandos***`)
+.setDescription(`***Help***`)
+         
+                msg.edit(embed_two)
+        r.users.remove(message.author.id) //isso irá remover as reações de quem chamou o comando
+            })
+            voltar.on(`collect`, r =>{ //quando coletar
+                let embed_three = new Discord.MessageEmbed()
+        .setColor(`ff0a7e`)
+        .setTitle(`Help -`)
+        .setDescription(`***Olá ***`)
+        
+        msg.edit(embed_three)
+        r.users.remove(message.author.id) //isso irá remover as reações de quem chamou o comando
+            })
+        })
+  três.on(`collect`, r =>{ 
+//aqui Você bota a embed e o comando!
+
+msg.edit(nome da variavel)
+r.users.remove(message.author.id) //isso irá remover as reações de quem chamou o comando
+})
+  
+  quatro.on(`collect`, r =>{ 
+//aqui Você bota a embed e o comando!
+
+msg.edit(nome da variavel)
+r.users.remove(message.author.id) //isso irá remover as reações de quem chamou o comando
+})
+
+
+  }
+  ```

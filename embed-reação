@@ -1,4 +1,4 @@
-```
+
 const Discord = require(`discord.js`);
 
 
@@ -60,4 +60,4 @@ r.users.remove(message.author.id) //isso irá remover as reações de quem chamo
 
 
   }
-  ```
+  
